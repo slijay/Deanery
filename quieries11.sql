@@ -25,20 +25,20 @@ WHERE date = "01.01.2017";
 SELECT COUNT(DISTINCT student_id)
 FROM result
 WHERE mark = "61" AND group_id IN (SELECT id		
-  						           FROM tgroup
-  						           WHERE year AND course_name IN (SELECT group_year AND course_name
-  						           	                              FROM exam
-  						           	                              WHERE course_name = "БМТ" AND group_year = "2017"));
+  						                     FROM tgroup
+  						                     WHERE year AND course_name IN (SELECT group_year AND course_name
+  						           	                                        FROM exam
+  						           	                                        WHERE course_name = "БМТ" AND group_year = "2017"));
 
 # Запит: Для заданого іспиту вивести к-сть неявок
 
 SELECT COUNT(DISTINCT student_id)
 FROM result
 WHERE mark = "ABSENT" AND group_id IN (SELECT id		
-  						           FROM tgroup
-  						           WHERE year AND course_name IN (SELECT group_year AND course_name
-  						           	                              FROM exam
-  						           	                              WHERE course_name = "БМТ" AND group_year = "2017"));
+  						                         FROM tgroup
+  						                         WHERE year AND course_name IN (SELECT group_year AND course_name
+  						           	                                            FROM exam
+  						           	                                            WHERE course_name = "БМТ" AND group_year = "2017"));
 
 # Запит: Для заданого іспиту вивести середній бал студентів
 
