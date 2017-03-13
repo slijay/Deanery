@@ -1,3 +1,12 @@
+# Запит: Вивести всі екзамени, які проводить заданий викладач
+
+SELECT *
+FROM exam
+WHERE professor_id IN (SELECT id
+                       FROM teacher
+                       WHERE name = "Teachername1")
+
+
 # Запит: Вивести екзамени, які організовує задана кафедра
 
 SELECT *
