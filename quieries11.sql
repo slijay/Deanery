@@ -20,7 +20,7 @@ WHERE course_name IN (SELECT name
 SELECT *
 FROM exam
 WHERE course_name AND group_year AND professor_id IN (SELECT course_name AND year AND professor_id
-Вивести екзамени, які організовує задана кафедра                                                      FROM tgroup
+                                                      FROM tgroup
                                                       WHERE id = "01");
 
 # Запит: Вивести екзамени, які проводяться у вказану дату
